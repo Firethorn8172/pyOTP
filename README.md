@@ -2,7 +2,7 @@
 
 OTP system in Python
 
-Disclaimer: this project has not been vetted for security and is intended as a demonstration.
+Disclaimer: this project has not been vetted for security and is only intended as a demonstration.
 
 ## Basic Function
 
@@ -14,7 +14,7 @@ These codes may be printed or used for verifying another person's codes are corr
 The second iteration of pyOTP. The first one is not published as it's highly impractical.
 
 - runOTP will display one-time passwords alongside a countdown while it runs. Best called in a child thread while the parent listens for a stop command.
-- verifyOTP will return true or false depending on if the otp provided is currently valid.
+- verifyOTP will return true or false depending on if the OTP provided is currently valid.
 - hashLoop is a helper method that mangles the hashed PSK and timestamp//30 whilst blending them together.
 - main will provide basic functionality to runOTP and verifyOTP if running otpv2.py on its own.
 
@@ -28,11 +28,11 @@ A password-manager-type program designed to store PSKs.
 
 - First-time setup wizard is provided.
 - Master password is confirmed by testing that a known text decrypts correctly.
-- Can add OTP from custom or random PSK.
+- Can add OTPs from custom or random PSKs.
 - Deletion has confirmation.
 - Can list OTPs and reveal PSKs.
 - Data saves automatically on exit.
-- All data is stored in a JSON file.
+- All on-disk data is stored in a single JSON file.
 - PSKs are encrypted with AES, only decrypted when needed, and hashed whenever possible.
 - Master password is only stored in RAM.
 - Sensitive variables are set to random bytes when no longer in use.
